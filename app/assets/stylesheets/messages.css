@@ -1,0 +1,16 @@
+.message {
+  padding: 3px 10px;
+  color: #FFF;
+  font-weight: 300;
+  margin: 0;
+  font-size: 14px;
+  opacity: .9;
+}
+
+.error {
+  background: #e80d0d;
+}
+
+.success {
+  background: #0b7b04;
+}
