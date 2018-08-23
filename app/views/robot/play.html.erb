@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="game text-center">
+
+    <table class="tabletop">
+      <% (0..@robot.table.height).each do |h| %>
+        <tr>
+          <% (0..@robot.table.width).each do |w| %>
+            <td>
+              <% if @robot.x == w && @robot.y == h %>
+                <%= image_tag "avatar.png", class: "avatar #{@robot.position}" %>
+              <% else %>
+                <span></span>
+              <% end %>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+
+    <div class="actions text-left">
+      <div class="header">
+        <h1>Console</h1>
+      </div>
+      <div class="console">
+        <%= form_tag("/play", method: "post") do |f| %>
+          <span class="log">
+            Heelo, I am Ale Robot<br><br>
+            place - X, Y, FACING (NORTH, SOUTH, EAST or WEST)<br>
+            move - (no arguments)<br>
+            left - (no arguments)<br>
+            right - (no arguments)<br><br>
+            Write your command bellow and press enter<br>
+          </span>
+          <%= text_field_tag :command, nil, placeholder: 'Please, write your command here and press enter ...'%>
+          <%= hidden_field_tag :x, @robot.x %>
+          <%= hidden_field_tag :y, @robot.y %>
+          <%= hidden_field_tag :position, @robot.position %>
+          <!-- <%= submit_tag("Run") %> -->
+        <% end %>
+      </div>
+      <%= flash_message %>
+    </div>
+    <div class="quit text-right">
+      <a href="/" class="btn btn-quit">Exit</a>
+    </div>
+  </div>
+</div>
