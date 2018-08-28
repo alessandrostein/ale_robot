@@ -4,7 +4,12 @@ module Command
 
   def place(args)
     args = args.split(",")
-    @x, @y, @position = args[0].to_i, args[1].to_i, args[2].downcase.to_sym
+    position_x = args[0].to_i
+    @x = position_x > @table.width ? @table.width : position_x
+    position_y = args[1].to_i
+    @y = position_y > @table.height ? @table.height : position_y
+    @position = args[2].downcase.to_sym
+    @placed = true
   end
 
   def move
@@ -31,13 +36,9 @@ module Command
       Direction::AVAILABLES.index(@position) + 1
     ] || Direction::AVAILABLES[0]
   end
-
-  def report
-    p "#{@x},#{@y},#{@position.upcase}"
-  end
-
+  
   def self.is_valid?(command)
-    AVAILABLES.include?(command.downcase.to_sym)
+    AVAILABLES.include?(command)
   end
 
 end

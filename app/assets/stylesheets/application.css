@@ -29,18 +29,6 @@
   padding: 20px;
 }
 
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
-
 .btn {
   padding: 10px 20px;
   text-decoration: none;
@@ -73,37 +61,9 @@
   height: 100%;
 }
 
-.tabletop {
-  width: 100%;
-  margin-top: 20px;
-  border-collapse: collapse;
-}
-
-.tabletop tr td {
-  width: 20%;
-  border: 1px solid #000;
-  height: 30px;
-}
-
 .avatar {
   width: 30px;
   height: 30px;
-}
-
-.north {
-  transform: rotate(0deg);
-}
-
-.east {
-  transform: rotate(90deg);
-}
-
-.south {
-  transform: rotate(180deg);
-}
-
-.west {
-  transform: rotate(270deg);
 }
 
 .actions {
@@ -118,29 +78,6 @@
 
 .actions .header h1 {
   font-size: 14px;
-}
-
-.actions .console {
-  padding-left: 10px;
-  background-color: #000;
-  color: #FFF;
-}
-
-.actions .console input {
-  border: none;
-  background: none;
-  color: #FFF;
-  width: 100%;
-  height: 40px;
-}
-
-.actions .console input:focus {
-  border: none;
-}
-
-.actions .console .log {
-  font-size: 12px;
-  opacity: .9;
 }
 
 .quit {

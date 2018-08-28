@@ -35,13 +35,14 @@
           <%= hidden_field_tag :x, @robot.x %>
           <%= hidden_field_tag :y, @robot.y %>
           <%= hidden_field_tag :position, @robot.position %>
+          <%= hidden_field_tag :placed, @robot.placed %>
           <!-- <%= submit_tag("Run") %> -->
         <% end %>
       </div>
       <%= flash_message %>
     </div>
     <div class="quit text-right">
-      <a href="/" class="btn btn-quit">Exit</a>
+      <a href="/quit" class="btn btn-quit">Exit</a>
     </div>
   </div>
 </div>
