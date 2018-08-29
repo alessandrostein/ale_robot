@@ -1,0 +1,11 @@
+.tabletop {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.tabletop tr td {
+  width: 20%;
+  border: 1px solid #000;
+  height: 30px;
+}

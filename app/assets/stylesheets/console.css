@@ -1,0 +1,22 @@
+.console {
+  padding-left: 10px;
+  background-color: #000;
+  color: #FFF;
+}
+
+.console input {
+  border: none;
+  background: none;
+  color: #FFF;
+  width: 100%;
+  height: 40px;
+}
+
+.console input:focus {
+  border: none;
+}
+
+.console .log {
+  font-size: 12px;
+  opacity: .9;
+}
